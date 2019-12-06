@@ -6,6 +6,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -15,7 +16,7 @@ public class JetphotosFirstRegistrationCheck {
     public JetphotosFirstRegistrationCheck() {
     }
 
-    public List<FirstRegistrationCheckResult> checkFirstRegistrations(final List<AircraftMetadata> aircraftMetadata) {
+    public List<FirstRegistrationCheckResult> checkFirstRegistrations(final Collection<AircraftMetadata> aircraftMetadata) {
         return aircraftMetadata.stream().map(this::checkFirstRegistration).collect(Collectors.toList());
     }
 
